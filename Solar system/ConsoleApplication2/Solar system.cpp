@@ -56,41 +56,51 @@ void OnDisplay() {
 	//The Sun (Yellow)
 	glTranslatef(10, 10, 0);
 	glRotatef(sunAngle, 0, 0, 1);
-	glBegin(GL_QUADS);
+	glBegin(GL_POLYGON);
 	glColor3f(1, 1, 0);
 	glVertex3f(10, 10, 0);
+	glVertex3f(0 , 15, 0);
 	glVertex3f(-10, 10, 0);
+	glVertex3f(-15, 0, 0);
 	glVertex3f(-10, -10, 0);
+	glVertex3f(0, -15, 0);
 	glVertex3f(10, -10, 0);
+	glVertex3f(15, 0, 0);
 	glEnd();
 
 	//The Earth (Blue)
-	glutSolidSphere(3,100,100);
-	glEnd();
+
 	glRotatef(earthAngle, 0, 0, 1);
 	glTranslatef(35, 35, 0);
-	glBegin(GL_QUADS);
+	glBegin(GL_POLYGON);
 	glColor3f(0, 0, 1);
 	glVertex3f(5, 5, 0);
+	glVertex3f(0, 10, 0);
 	glVertex3f(-5, 5, 0);
+	glVertex3f(-10, 0, 0);
 	glVertex3f(-5, -5, 0);
+	glVertex3f(0, -10, 0);
 	glVertex3f(5, -5, 0);
+	glVertex3f(10, 0, 0);
 	glEnd();
 
 	//The Moon (white)
 	
 	glRotatef(moonAngle, 0, 0, 1);
 	glTranslatef(14, 14, 0);
-	glBegin(GL_QUADS);
+	glBegin(GL_POLYGON);
 	glColor3f(1, 1, 1);
 	glVertex3f(2.5, 2.5, 0);
+	glVertex3f(0, 5, 0);
 	glVertex3f(-2.5, 2.5, 0);
+	glVertex3f(-5, 0, 0);
 	glVertex3f(-2.5, -2.5, 0);
+	glVertex3f(0, -5, 0);
 	glVertex3f(2.5, -2.5, 0);
+	glVertex3f(5, 0, 0);
 	glEnd();
 
-	glColor3f(1,0,1);
-	glutSolidSphere(3,100,100);
+
 	glutSwapBuffers();
 	Update();
 	glutPostRedisplay();
