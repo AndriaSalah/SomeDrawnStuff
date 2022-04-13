@@ -1,0 +1,3 @@
+﻿  DDA.cpp
+C:\Users\andria\source\repos\DDA\DDA\DDA.cpp(64,1): warning C4326: return type of 'main' should be 'int' instead of 'void'
+  DDA.vcxproj -> C:\Users\andria\source\repos\DDA\Debug\DDA.exe
